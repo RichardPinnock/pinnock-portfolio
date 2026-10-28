@@ -19,7 +19,12 @@ export function SiteFooter({
         </p>
         <p>
           {builtWith}{" "}
-          <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
             GitHub
           </a>
         </p>

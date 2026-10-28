@@ -48,11 +48,12 @@ export function SiteHeader({ name, items, labels, switcher }: SiteHeaderProps) {
             href={switcher.href}
             lang={switcher.locale}
             hrefLang={switcher.locale}
-            aria-label={switcher.label}
             title={switcher.name}
             className="inline-flex h-10 min-w-10 items-center justify-center rounded-md border border-border px-2 font-medium text-foreground text-sm no-underline hover:bg-accent hover:text-foreground"
           >
             {switcher.code}
+            {/* The accessible name must contain the visible text ("EN"), so it extends it instead of replacing it. */}
+            <span className="sr-only"> - {switcher.label}</span>
           </a>
           <MobileNav
             items={items}
