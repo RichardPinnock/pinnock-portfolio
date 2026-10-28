@@ -1,0 +1,14 @@
+[
+  {
+    "id": "todo-example-position",
+    "role": { "es": "TODO: cargo", "en": "TODO: role" },
+    "company": "TODO",
+    "start": "2000-01",
+    "end": null,
+    "summary": { "es": "TODO: resumen del puesto", "en": "TODO: role summary" },
+    "highlights": [],
+    "technologies": [],
+    "visible": false,
+    "order": 0
+  }
+]

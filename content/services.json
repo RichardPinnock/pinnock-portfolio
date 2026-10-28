@@ -1,0 +1,58 @@
+[
+  {
+    "id": "custom-development",
+    "title": { "es": "Desarrollo a medida", "en": "Custom development" },
+    "description": {
+      "es": "Aplicaciones y sistemas diseñados alrededor de los procesos de cada empresa, de la idea a producción.",
+      "en": "Applications and systems designed around each company's processes, from idea to production."
+    },
+    "stack": ["TODO"],
+    "order": 0
+  },
+  {
+    "id": "frontend",
+    "title": { "es": "Frontend", "en": "Frontend" },
+    "description": {
+      "es": "Interfaces rápidas, accesibles y mantenibles con una base de componentes coherente.",
+      "en": "Fast, accessible and maintainable interfaces built on a consistent component base."
+    },
+    "stack": ["TODO"],
+    "order": 1
+  },
+  {
+    "id": "architecture",
+    "title": {
+      "es": "Arquitectura de software",
+      "en": "Software architecture"
+    },
+    "description": {
+      "es": "Decisiones técnicas razonadas y documentadas para que el producto pueda crecer sin reescribirse.",
+      "en": "Reasoned, documented technical decisions so the product can grow without a rewrite."
+    },
+    "stack": ["TODO"],
+    "order": 2
+  },
+  {
+    "id": "devops",
+    "title": { "es": "DevOps", "en": "DevOps" },
+    "description": {
+      "es": "Integración y despliegue continuos, entornos reproducibles e infraestructura bajo control.",
+      "en": "Continuous integration and delivery, reproducible environments and infrastructure under control."
+    },
+    "stack": ["TODO"],
+    "order": 3
+  },
+  {
+    "id": "project-management",
+    "title": {
+      "es": "Requisitos y gestión de proyectos",
+      "en": "Requirements and project management"
+    },
+    "description": {
+      "es": "Levantamiento de requisitos funcionales y seguimiento del proyecto para entregar lo acordado.",
+      "en": "Functional requirements analysis and project follow-up to deliver what was agreed."
+    },
+    "stack": ["TODO"],
+    "order": 4
+  }
+]

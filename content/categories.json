@@ -1,0 +1,31 @@
+[
+  {
+    "id": "web-apps",
+    "name": { "es": "Aplicaciones web", "en": "Web apps" },
+    "order": 0
+  },
+  {
+    "id": "mobile",
+    "name": { "es": "Apps móviles", "en": "Mobile apps" },
+    "order": 1
+  },
+  {
+    "id": "integrations",
+    "name": { "es": "Integraciones y APIs", "en": "Integrations and APIs" },
+    "order": 2
+  },
+  {
+    "id": "crm-erp",
+    "name": { "es": "CRM y ERP", "en": "CRM and ERP" },
+    "order": 3
+  },
+  {
+    "id": "devops",
+    "name": {
+      "es": "DevOps e infraestructura",
+      "en": "DevOps and infrastructure"
+    },
+    "order": 4
+  },
+  { "id": "tools", "name": { "es": "Herramientas", "en": "Tools" }, "order": 5 }
+]

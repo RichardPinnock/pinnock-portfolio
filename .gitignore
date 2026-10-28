@@ -34,6 +34,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# generated draft from scripts/analyze-repos.ts (may reference private repos)
+/content/projects.draft.json
+
 # vercel
 .vercel
 

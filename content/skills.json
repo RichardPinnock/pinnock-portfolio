@@ -1,0 +1,20 @@
+[
+  {
+    "id": "frontend",
+    "name": { "es": "Frontend", "en": "Frontend" },
+    "items": ["TODO"],
+    "order": 0
+  },
+  {
+    "id": "backend",
+    "name": { "es": "Backend", "en": "Backend" },
+    "items": ["TODO"],
+    "order": 1
+  },
+  {
+    "id": "devops",
+    "name": { "es": "DevOps", "en": "DevOps" },
+    "items": ["TODO"],
+    "order": 2
+  }
+]

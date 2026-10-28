@@ -1,0 +1,48 @@
+{
+  "name": "Richard Pinnock",
+  "headline": {
+    "es": "Desarrollador de software freelance desde Cuba: construyo software a medida para empresas en España y otros países.",
+    "en": "Freelance software developer based in Cuba, building custom software for companies in Spain and beyond."
+  },
+  "role": {
+    "es": "Desarrollador de software freelance",
+    "en": "Freelance software developer"
+  },
+  "bio": {
+    "es": [
+      "Soy desarrollador de software independiente con base en Cuba. Trabajo en remoto con empresas de España y de otros países, y combino frontend, DevOps, arquitectura de software y requisitos funcionales con gestión de proyectos.",
+      "TODO: tu historia en 2-3 frases (de dónde vienes, cómo empezaste, qué te mueve)."
+    ],
+    "en": [
+      "I am an independent software developer based in Cuba. I work remotely with companies in Spain and other countries, combining frontend, DevOps, software architecture and functional requirements with project management.",
+      "TODO: your story in 2-3 sentences (where you come from, how you started, what drives you)."
+    ]
+  },
+  "location": {
+    "country": { "es": "Cuba", "en": "Cuba" },
+    "countryCode": "CU",
+    "coordinates": [23.1136, -82.3666]
+  },
+  "clientCountries": ["ES"],
+  "email": "phoenixpinnock@gmail.com",
+  "agency": { "name": "FireNest", "url": "https://firenest.info" },
+  "socials": [
+    {
+      "network": "GitHub",
+      "url": "https://github.com/RichardPinnock",
+      "handle": "RichardPinnock"
+    }
+  ],
+  "languages": [
+    {
+      "code": "es",
+      "name": { "es": "Español", "en": "Spanish" },
+      "level": { "es": "Nativo", "en": "Native" }
+    },
+    {
+      "code": "en",
+      "name": { "es": "Inglés", "en": "English" },
+      "level": { "es": "TODO", "en": "TODO" }
+    }
+  ]
+}

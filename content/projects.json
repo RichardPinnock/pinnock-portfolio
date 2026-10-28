@@ -1,0 +1,16 @@
+[
+  {
+    "id": "todo-example-project",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción de 1-2 frases, sin nombres de clientes.",
+      "en": "TODO: 1-2 sentence description, no client names."
+    },
+    "category": "web-apps",
+    "technologies": ["TODO"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 0
+  }
+]
