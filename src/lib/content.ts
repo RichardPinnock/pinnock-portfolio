@@ -92,10 +92,10 @@ export function getSkillGroups(locale: Locale) {
 
 export function getProjectsView(locale: Locale) {
   const visible = byOrder(content.projects)
-    .filter((p) => p.visible && !isPlaceholder(p.name))
+    .filter((p) => p.visible && !isPlaceholder(localize(p.name, locale)))
     .map((p) => ({
       id: p.id,
-      name: p.name,
+      name: localize(p.name, locale),
       description: localize(p.description, locale),
       category: p.category,
       technologies: real(p.technologies),

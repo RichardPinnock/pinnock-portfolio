@@ -135,7 +135,7 @@ const draft = analyzed.map(({ repo, technologies, category }, index) => ({
   // Neutral ids/names on purpose: repo names and descriptions can identify clients.
   // A short hash keeps ids stable between runs without exposing the repo name.
   id: `project-${createHash("sha256").update(`${owner}/${repo.name}`).digest("hex").slice(0, 8)}`,
-  name: "TODO",
+  name: { es: "TODO", en: "TODO" },
   description: {
     es: "TODO: descripción genérica, sin datos del cliente.",
     en: "TODO: generic description, no client data.",
