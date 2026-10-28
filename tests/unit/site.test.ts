@@ -72,6 +72,14 @@ describe("rendered content selectors", () => {
   });
 });
 
+describe("WhatsApp contact", () => {
+  it("builds a wa.me link with the international number and no plus sign", () => {
+    const profile = getProfile("es");
+    expect(profile.whatsapp).toBe("+5354687716");
+    expect(profile.whatsappUrl).toBe("https://wa.me/5354687716");
+  });
+});
+
 describe("cvPath", () => {
   it("builds an accent-free, kebab-case file name per locale", () => {
     expect(cvPath("Álvaro Núñez", "es")).toBe("/cv/alvaro-nunez-cv-es.pdf");

@@ -67,6 +67,14 @@ describe("parseContent", () => {
     );
   });
 
+  it("rejects a WhatsApp number that is not in international format", () => {
+    const raw = fixture();
+    (raw.profile as { whatsapp: string }).whatsapp = "54687716";
+    expect(() => parseContent(raw)).toThrow(
+      /content\/profile\.json -> whatsapp/,
+    );
+  });
+
   it("rejects non-https social links", () => {
     const raw = fixture();
     (raw.profile as { socials: { url: string }[] }).socials[0].url =

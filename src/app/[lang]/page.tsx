@@ -114,6 +114,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         ) : null}
         <Contact
           email={profile.email}
+          whatsappUrl={profile.whatsappUrl}
           socials={profile.socials}
           messages={t.contact}
         />
@@ -128,6 +129,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         label={t.nav.label}
         sections={sections}
         socials={profile.socials}
+        whatsapp={{ url: profile.whatsappUrl, label: "WhatsApp" }}
         switcher={{
           href: `/${other}`,
           locale: other,

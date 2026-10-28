@@ -14,6 +14,8 @@ export interface CvData {
   role: string;
   contact: {
     email: string;
+    /** International format, shown in the CV body for recruiters. */
+    phone?: string;
     location: string;
     links: { label: string; url: string }[];
   };
@@ -53,6 +55,7 @@ export function getCvData(locale: Locale): CvData {
     role: profile.role,
     contact: {
       email: profile.email,
+      phone: profile.whatsapp,
       location: profile.city
         ? `${profile.city}, ${profile.country}`
         : profile.country,
