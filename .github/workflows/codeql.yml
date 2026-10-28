@@ -13,6 +13,8 @@ permissions:
 jobs:
   analyze:
     name: Analyze
+    # Uploading results needs GitHub Advanced Security, which private repos lack.
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
