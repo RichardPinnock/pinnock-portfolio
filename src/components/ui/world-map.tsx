@@ -2,10 +2,13 @@
 // - No `next-themes`: the site is dark-only, so the light/dark switch is gone and the background is transparent.
 // - The base map is the static /world-map.svg (scripts/generate-world-map.ts) instead of a ~960 KB
 //   data: URI built with `dotted-map` on every render.
+// - Points use the Mercator projection of the base map (src/lib/map-projection.ts) instead of an
+//   equirectangular one, which placed every marker too far north.
 // - Animations are plain CSS (see `.world-map-arc` / `.world-map-pulse` in globals.css) instead of Motion and
 //   SMIL. Same timings and easing, but the component is now a Server Component with no JavaScript, which keeps
 //   Motion out of the initial bundle, and `prefers-reduced-motion` is handled by a media query.
 import Image from "next/image";
+import { projectToMap } from "@/lib/map-projection";
 
 interface MapProps {
   dots?: Array<{
@@ -15,10 +18,10 @@ interface MapProps {
   lineColor?: string;
 }
 
+// The source assumed an equirectangular map; the base map is Mercator (see src/lib/map-projection.ts).
 const projectPoint = (lat: number, lng: number) => {
-  const x = (lng + 180) * (800 / 360);
-  const y = (90 - lat) * (400 / 180);
-  return { x, y };
+  const { x, y } = projectToMap(lat, lng);
+  return { x: x * 800, y: y * 400 };
 };
 
 const dotKey = (dot: NonNullable<MapProps["dots"]>[number]) =>
