@@ -8,7 +8,7 @@
     "summary": { "es": "TODO: resumen del puesto", "en": "TODO: role summary" },
     "highlights": [],
     "technologies": [],
-    "visible": false,
+    "visible": true,
     "order": 0
   }
 ]
