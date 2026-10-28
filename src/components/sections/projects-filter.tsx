@@ -21,7 +21,7 @@ interface ProjectView {
   year: number;
 }
 
-interface ProjectsFilterProps {
+export interface ProjectsFilterProps {
   projects: ProjectView[];
   categories: { id: string; name: string }[];
   labels: { filter: string; all: string; count: string; countOne: string };
