@@ -10,6 +10,7 @@ import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { Services } from "@/components/sections/services";
 import { Skills } from "@/components/sections/skills";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getMessages } from "@/i18n/messages";
 import {
   getExperience,
@@ -19,6 +20,8 @@ import {
   getSkillGroups,
 } from "@/lib/content";
 import { cvPath } from "@/lib/cv";
+import { env } from "@/lib/env";
+import { buildJsonLd } from "@/lib/json-ld";
 import { hasLocale, otherLocale } from "@/lib/locale";
 import { locales } from "@/lib/schemas/common";
 import { alternatesFor } from "@/lib/seo";
@@ -63,6 +66,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   return (
     <>
+      <JsonLd
+        data={buildJsonLd(locale, env.NEXT_PUBLIC_SITE_URL, t.breadcrumb.home)}
+      />
       <SkipLink label={t.skipToContent} />
       <SiteHeader
         name={profile.name}

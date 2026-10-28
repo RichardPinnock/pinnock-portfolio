@@ -6,6 +6,7 @@
     "switchTo": "Cambiar el idioma a inglés"
   },
   "skipToContent": "Saltar al contenido",
+  "breadcrumb": { "home": "Inicio" },
   "nav": {
     "label": "Principal",
     "about": "Quién soy",

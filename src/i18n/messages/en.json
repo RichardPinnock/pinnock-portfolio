@@ -6,6 +6,7 @@
     "switchTo": "Switch the language to Spanish"
   },
   "skipToContent": "Skip to content",
+  "breadcrumb": { "home": "Home" },
   "nav": {
     "label": "Main",
     "about": "About",
