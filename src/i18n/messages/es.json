@@ -40,7 +40,8 @@
     "filterLabel": "Filtrar por categoría",
     "all": "Todos",
     "count": "{count} proyectos",
-    "countOne": "1 proyecto"
+    "countOne": "1 proyecto",
+    "featured": "Destacado"
   },
   "experience": {
     "eyebrow": "Trayectoria",

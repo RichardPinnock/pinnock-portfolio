@@ -26,6 +26,7 @@ export function Projects({ projects, categories, messages }: ProjectsProps) {
           all: messages.all,
           count: messages.count,
           countOne: messages.countOne,
+          featured: messages.featured,
         }}
       />
     </Section>
