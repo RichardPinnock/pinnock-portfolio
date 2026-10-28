@@ -172,8 +172,9 @@ export function CvDocument({ data }: { data: CvData }) {
         {data.skills.length > 0 ? (
           <Section title={t.skills}>
             {data.skills.map((group) => (
-              <Text key={group.group} style={styles.paragraph}>
-                {group.group}: {group.items.join(", ")}
+              <Text key={group.items.join()} style={styles.paragraph}>
+                {group.group ? `${group.group}: ` : ""}
+                {group.items.join(", ")}
               </Text>
             ))}
           </Section>
