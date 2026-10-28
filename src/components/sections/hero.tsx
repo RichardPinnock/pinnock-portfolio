@@ -51,7 +51,7 @@ export function Hero({
           </p>
           <h1
             id="hero-title"
-            className="max-w-3xl font-semibold text-4xl leading-[1.05] sm:text-5xl lg:text-5xl xl:text-6xl"
+            className="max-w-3xl font-semibold text-4xl leading-[1.05] sm:text-5xl lg:text-3xl xl:text-4xl"
           >
             {headline}
           </h1>
