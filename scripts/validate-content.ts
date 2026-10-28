@@ -34,8 +34,17 @@ try {
 
 console.log(`Content valid (${names.length} files).`);
 
-const todos = names.flatMap((name) => findTodos(raw[name], name));
-if (todos.length > 0) {
-  console.warn(`\n${todos.length} TODO placeholder(s) left:`);
-  for (const todo of todos) console.warn(`  - content/${todo}`);
+// Summarized per file: projects.json alone can hold hundreds. Pass --verbose for every path.
+const todosByFile = names
+  .map((name) => [name, findTodos(raw[name], name)] as const)
+  .filter(([, paths]) => paths.length > 0);
+if (todosByFile.length > 0) {
+  const total = todosByFile.reduce((sum, [, paths]) => sum + paths.length, 0);
+  console.warn(`\n${total} TODO placeholder(s) left:`);
+  for (const [name, paths] of todosByFile) {
+    console.warn(`  - content/${name}.json: ${paths.length}`);
+    if (process.argv.includes("--verbose")) {
+      for (const path of paths) console.warn(`      ${path}`);
+    }
+  }
 }
