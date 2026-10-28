@@ -49,3 +49,6 @@ next-env.d.ts
 
 # Lighthouse CI output
 /.lighthouseci/
+
+# original assets kept out of the build
+/design/
