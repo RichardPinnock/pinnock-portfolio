@@ -36,6 +36,8 @@ export const profileSchema = z.object({
   /** ISO 3166-1 alpha-2 codes of client countries, drawn as connections on the globe. */
   clientCountries: z.array(z.string().length(2)),
   email: z.email(),
+  /** International format with country code, e.g. +5354687716. Used for the wa.me link, the CV and JSON-LD. */
+  whatsapp: z.string().regex(/^\+\d{8,15}$/, "must be like +5354687716"),
   agency: z.object({ name: z.string().min(1), url: httpsUrl }),
   /** Public URL of this portfolio's source code, linked from the footer. */
   repositoryUrl: httpsUrl,

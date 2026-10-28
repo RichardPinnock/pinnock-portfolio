@@ -105,6 +105,7 @@ export function CvDocument({ data }: { data: CvData }) {
         <Text style={styles.contact}>
           {[
             data.contact.email,
+            ...(data.contact.phone ? [data.contact.phone] : []),
             data.contact.location,
             ...data.contact.links.map((l) => l.url.replace(/^https:\/\//, "")),
           ].join(" | ")}

@@ -40,6 +40,9 @@ export function getProfile(locale: Locale) {
     country: localize(p.location.country, locale),
     city: p.location.city ? localize(p.location.city, locale) : null,
     email: p.email,
+    whatsapp: p.whatsapp,
+    // wa.me wants the number in international format without the "+".
+    whatsappUrl: `https://wa.me/${p.whatsapp.slice(1)}`,
     agency: p.agency,
     repositoryUrl: p.repositoryUrl,
     socials: p.socials,

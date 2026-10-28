@@ -25,6 +25,7 @@
   },
   "clientCountries": ["ES", "PT", "MX", "CN", "CL", "US"],
   "email": "phoenixpinnock@gmail.com",
+  "whatsapp": "+5354687716",
   "agency": { "name": "FireNest", "url": "https://firenest.info" },
   "repositoryUrl": "https://github.com/RichardPinnock/pinnock-portfolio",
   "socials": [

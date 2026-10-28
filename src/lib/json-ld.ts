@@ -26,6 +26,7 @@ export function buildJsonLd(
         description: profile.headline,
         url: pageUrl,
         email: `mailto:${profile.email}`,
+        telephone: profile.whatsapp,
         address: {
           "@type": "PostalAddress",
           addressCountry: content.profile.location.countryCode,

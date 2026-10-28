@@ -4,6 +4,7 @@ import {
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
+  WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import {
   Folders,
@@ -37,6 +38,7 @@ interface DockNavProps {
   label: string;
   sections: DockSection[];
   socials: { network: string; url: string }[];
+  whatsapp: { url: string; label: string };
   switcher: { href: string; locale: string; code: string; label: string };
 }
 
@@ -94,14 +96,20 @@ function DockLink({
 }
 
 /** Floating bottom dock (Magic UI portfolio style): page sections, social profiles and the language switch. */
-export function DockNav({ label, sections, socials, switcher }: DockNavProps) {
+export function DockNav({
+  label,
+  sections,
+  socials,
+  whatsapp,
+  switcher,
+}: DockNavProps) {
   return (
     <TooltipProvider delayDuration={100}>
       <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30 px-3">
         <Dock
           label={label}
-          size={36}
-          magnification={52}
+          size={34}
+          magnification={50}
           className="pointer-events-auto h-14 w-fit items-center gap-1 bg-card/90 p-2 shadow-black/40 shadow-lg backdrop-blur-xl"
         >
           {sections.map((section) => {
@@ -136,6 +144,11 @@ export function DockNav({ label, sections, socials, switcher }: DockNavProps) {
               })}
             </>
           ) : null}
+
+          {/* WhatsApp stays visible on mobile: it is the quickest way to reach me from a phone. */}
+          <DockLink href={whatsapp.url} label={whatsapp.label} external>
+            <WhatsappLogo className="size-full" />
+          </DockLink>
 
           <Separator orientation="vertical" className="mx-1 h-2/3" />
           <Tooltip>
