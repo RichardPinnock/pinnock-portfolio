@@ -2,10 +2,28 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* The site is dark-only: the `dark` class is set on <html> so shadcn's `dark:` variants apply. */
 @custom-variant dark (&:is(.dark *));
 
+/* Brand scale: hue 285 (blue-violet). 500 is the base, nudged from the 0.58
+   starting point so button labels reach 4.5:1.
+   Steps 50-400 are for text and highlights on dark surfaces, 600-950 for fills and depth. */
+@theme {
+  --color-brand-50: oklch(0.97 0.015 285);
+  --color-brand-100: oklch(0.94 0.03 285);
+  --color-brand-200: oklch(0.88 0.06 285);
+  --color-brand-300: oklch(0.8 0.1 285);
+  --color-brand-400: oklch(0.7 0.15 285);
+  --color-brand-500: oklch(0.56 0.19 285);
+  --color-brand-600: oklch(0.5 0.19 285);
+  --color-brand-700: oklch(0.43 0.17 285);
+  --color-brand-800: oklch(0.35 0.13 285);
+  --color-brand-900: oklch(0.28 0.09 285);
+  --color-brand-950: oklch(0.2 0.06 285);
+}
+
 @theme inline {
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-bricolage);
   --font-sans: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -47,73 +65,42 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* Semantic tokens. Neutrals share a cool hue (275) with low chroma so layers read as
+   tinted near-blacks rather than pure black. Contrast pairs are verified by `pnpm contrast`. */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  color-scheme: dark;
+  --background: oklch(0.15 0.012 275);
+  --foreground: oklch(0.96 0.008 275);
+  --card: oklch(0.185 0.014 275);
+  --card-foreground: oklch(0.96 0.008 275);
+  --popover: oklch(0.21 0.016 275);
+  --popover-foreground: oklch(0.96 0.008 275);
+  --primary: oklch(0.56 0.19 285);
+  --primary-foreground: oklch(0.99 0.004 285);
+  --secondary: oklch(0.24 0.018 275);
+  --secondary-foreground: oklch(0.96 0.008 275);
+  --muted: oklch(0.22 0.015 275);
+  --muted-foreground: oklch(0.72 0.02 275);
+  --accent: oklch(0.28 0.06 285);
+  --accent-foreground: oklch(0.96 0.008 275);
+  --destructive: oklch(0.7 0.19 22);
+  --border: oklch(0.3 0.02 275);
+  --input: oklch(0.52 0.03 275);
+  --ring: oklch(0.7 0.15 285);
+  --chart-1: oklch(0.8 0.1 285);
+  --chart-2: oklch(0.7 0.15 285);
+  --chart-3: oklch(0.56 0.19 285);
+  --chart-4: oklch(0.5 0.19 285);
+  --chart-5: oklch(0.43 0.17 285);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.185 0.014 275);
+  --sidebar-foreground: oklch(0.96 0.008 275);
+  --sidebar-primary: oklch(0.56 0.19 285);
+  --sidebar-primary-foreground: oklch(0.99 0.004 285);
+  --sidebar-accent: oklch(0.28 0.06 285);
+  --sidebar-accent-foreground: oklch(0.96 0.008 275);
+  --sidebar-border: oklch(0.3 0.02 275);
+  --sidebar-ring: oklch(0.7 0.15 285);
 }
 
 @layer base {
@@ -121,9 +108,35 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
   html {
     @apply font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-heading tracking-tight text-balance;
+  }
+  a {
+    @apply text-brand-300 underline-offset-4 hover:text-brand-200;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    /* biome-ignore lint/complexity/noImportantStyles: the reduced-motion reset must beat any component animation */
+    animation-duration: 0.01ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: see above */
+    animation-iteration-count: 1 !important;
+    /* biome-ignore lint/complexity/noImportantStyles: see above */
+    scroll-behavior: auto !important;
+    /* biome-ignore lint/complexity/noImportantStyles: see above */
+    transition-duration: 0.01ms !important;
   }
 }
