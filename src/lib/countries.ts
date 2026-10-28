@@ -1,0 +1,20 @@
+/** Approximate geographic centers (lat, lng) of countries, used to draw connections on the hero globe. */
+export const countryCenters: Record<string, [number, number]> = {
+  AR: [-38.42, -63.62],
+  CA: [56.13, -106.35],
+  CL: [-35.68, -71.54],
+  CO: [4.57, -74.3],
+  DE: [51.17, 10.45],
+  DO: [18.74, -70.16],
+  EC: [-1.83, -78.18],
+  ES: [40.46, -3.75],
+  FR: [46.23, 2.21],
+  GB: [55.38, -3.44],
+  IT: [41.87, 12.57],
+  MX: [23.63, -102.55],
+  PA: [8.54, -80.78],
+  PE: [-9.19, -75.02],
+  PT: [39.4, -8.22],
+  US: [37.09, -95.71],
+  UY: [-32.52, -55.77],
+};

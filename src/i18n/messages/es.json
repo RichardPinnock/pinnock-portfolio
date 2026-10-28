@@ -1,0 +1,64 @@
+{
+  "skipToContent": "Saltar al contenido",
+  "nav": {
+    "label": "Principal",
+    "about": "Quién soy",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "stack": "Stack",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "contact": "Contactar",
+    "downloadCv": "Descargar CV",
+    "agencyPrefix": "Fundador de",
+    "globeCaption": "Globo terráqueo con conexiones desde Cuba hacia los países de mis clientes."
+  },
+  "about": {
+    "eyebrow": "Quién soy",
+    "title": "De dónde vengo",
+    "location": "Con base en",
+    "languages": "Idiomas"
+  },
+  "services": {
+    "eyebrow": "Qué hago",
+    "title": "Servicios",
+    "stack": "Tecnologías"
+  },
+  "projects": {
+    "eyebrow": "Qué he hecho",
+    "title": "Proyectos",
+    "filterLabel": "Filtrar por categoría",
+    "all": "Todos",
+    "count": "{count} proyectos",
+    "countOne": "1 proyecto"
+  },
+  "experience": {
+    "eyebrow": "Trayectoria",
+    "title": "Experiencia",
+    "present": "Actualidad"
+  },
+  "stack": {
+    "eyebrow": "Herramientas",
+    "title": "Stack tecnológico"
+  },
+  "contact": {
+    "eyebrow": "Hablemos",
+    "title": "Contacto",
+    "intro": "¿Tienes un proyecto en mente? Cuéntame qué necesitas y vemos cómo ayudarte.",
+    "email": "Escríbeme a",
+    "elsewhere": "También en"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Código abierto en"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "La página que buscas no existe o se ha movido.",
+    "back": "Volver al inicio"
+  }
+}

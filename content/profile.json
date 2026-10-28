@@ -26,6 +26,7 @@
   "clientCountries": ["ES"],
   "email": "phoenixpinnock@gmail.com",
   "agency": { "name": "FireNest", "url": "https://firenest.info" },
+  "repositoryUrl": "https://github.com/RichardPinnock/pinnock-portfolio",
   "socials": [
     {
       "network": "GitHub",

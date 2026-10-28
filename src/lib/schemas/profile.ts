@@ -37,6 +37,8 @@ export const profileSchema = z.object({
   clientCountries: z.array(z.string().length(2)),
   email: z.email(),
   agency: z.object({ name: z.string().min(1), url: httpsUrl }),
+  /** Public URL of this portfolio's source code, linked from the footer. */
+  repositoryUrl: httpsUrl,
   socials: z.array(socialSchema),
   languages: z.array(languageSchema).min(1),
 });
