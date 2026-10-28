@@ -29,6 +29,7 @@ Package manager: pnpm. Node version in `.nvmrc`.
 | Build | `pnpm build` |
 | Lint / format | `pnpm lint` / `pnpm format` |
 | Typecheck | `pnpm typecheck` |
+| Contrast (WCAG AA) | `pnpm contrast` — run after touching theme tokens in `globals.css` |
 | Unit tests | `pnpm test` (added in phase 4) |
 | E2E tests | `pnpm e2e` (added in phase 9) |
 | Generate CV PDFs | `pnpm cv` (added in phase 8) |
