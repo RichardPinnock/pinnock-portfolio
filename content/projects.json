@@ -1,16 +1,793 @@
 [
   {
-    "id": "todo-example-project",
+    "id": "project-34c13bf9",
     "name": "TODO",
     "description": {
-      "es": "TODO: descripción de 1-2 frases, sin nombres de clientes.",
-      "en": "TODO: 1-2 sentence description, no client names."
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
     },
     "category": "web-apps",
-    "technologies": ["TODO"],
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     "year": 2025,
     "featured": false,
     "visible": false,
     "order": 0
+  },
+  {
+    "id": "project-fda47b0e",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "integrations",
+    "technologies": ["NestJS", "PostgreSQL", "Prisma", "Redis", "TypeScript"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 1
+  },
+  {
+    "id": "project-5e3f27d3",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 2
+  },
+  {
+    "id": "project-d87e473e",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "integrations",
+    "technologies": ["Docker", "NestJS", "PostgreSQL", "Prisma", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 3
+  },
+  {
+    "id": "project-492ff2d2",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 4
+  },
+  {
+    "id": "project-697d3656",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 5
+  },
+  {
+    "id": "project-b5c99475",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "integrations",
+    "technologies": ["NestJS", "Prisma", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 6
+  },
+  {
+    "id": "project-56536ee8",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "devops",
+    "technologies": ["Docker"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 7
+  },
+  {
+    "id": "project-d8bf804d",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 8
+  },
+  {
+    "id": "project-fef04feb",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 9
+  },
+  {
+    "id": "project-4efde4a3",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 10
+  },
+  {
+    "id": "project-0dac56e6",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 11
+  },
+  {
+    "id": "project-7b9fcd55",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 12
+  },
+  {
+    "id": "project-caa86153",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 13
+  },
+  {
+    "id": "project-161f9104",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "mobile",
+    "technologies": [
+      "Expo",
+      "React",
+      "React Native",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 14
+  },
+  {
+    "id": "project-9db7e4c6",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 15
+  },
+  {
+    "id": "project-4bf1d3d2",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": [
+      "Next.js",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 16
+  },
+  {
+    "id": "project-fe87b059",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 17
+  },
+  {
+    "id": "project-1daf885e",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "mobile",
+    "technologies": ["Expo", "React", "React Native", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 18
+  },
+  {
+    "id": "project-f63ec4a7",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 19
+  },
+  {
+    "id": "project-1a86a4e0",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 20
+  },
+  {
+    "id": "project-c9b03ee2",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["React"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 21
+  },
+  {
+    "id": "project-9b8b70ca",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "business-systems",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 22
+  },
+  {
+    "id": "project-7b5d80c4",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "integrations",
+    "technologies": ["NestJS", "TypeScript"],
+    "year": 2026,
+    "featured": false,
+    "visible": false,
+    "order": 23
+  },
+  {
+    "id": "project-c1f69e6d",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 24
+  },
+  {
+    "id": "project-fb83552f",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "crm-erp",
+    "technologies": ["TODO"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 25
+  },
+  {
+    "id": "project-a03b5bc4",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 26
+  },
+  {
+    "id": "project-9db81bac",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["PostgreSQL", "React", "Strapi", "TypeScript"],
+    "year": 2025,
+    "featured": false,
+    "visible": false,
+    "order": 27
+  },
+  {
+    "id": "project-1b976882",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ai",
+    "technologies": ["Express", "OpenAI API", "Twilio"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 28
+  },
+  {
+    "id": "project-d161434d",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "crm-erp",
+    "technologies": ["Python"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 29
+  },
+  {
+    "id": "project-55ac4073",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 30
+  },
+  {
+    "id": "project-c66fabcb",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 31
+  },
+  {
+    "id": "project-8766db51",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ai",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "OpenAI API",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 32
+  },
+  {
+    "id": "project-190e67c6",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ai",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "OpenAI API",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 33
+  },
+  {
+    "id": "project-5d5898e1",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ai",
+    "technologies": [
+      "Auth.js",
+      "Next.js",
+      "OpenAI API",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 34
+  },
+  {
+    "id": "project-a50ff362",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["TODO"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 35
+  },
+  {
+    "id": "project-d1d1e097",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": [
+      "Drizzle",
+      "Lucia",
+      "Next.js",
+      "PostgreSQL",
+      "React",
+      "Stripe",
+      "Tailwind CSS",
+      "TypeScript",
+      "tRPC"
+    ],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 36
+  },
+  {
+    "id": "project-9254d5b1",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 37
+  },
+  {
+    "id": "project-67f17904",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["React", "TypeScript"],
+    "year": 2024,
+    "featured": false,
+    "visible": false,
+    "order": 38
+  },
+  {
+    "id": "project-3e8b3064",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 39
+  },
+  {
+    "id": "project-e36a1286",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": [
+      "Next.js",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 40
+  },
+  {
+    "id": "project-ef5b6928",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 41
+  },
+  {
+    "id": "project-09063562",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 42
+  },
+  {
+    "id": "project-2a79e762",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 43
+  },
+  {
+    "id": "project-70811975",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 44
+  },
+  {
+    "id": "project-06978419",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "ecommerce",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 45
+  },
+  {
+    "id": "project-25362600",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": [
+      "Next.js",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 46
+  },
+  {
+    "id": "project-5030d5d3",
+    "name": "TODO",
+    "description": {
+      "es": "TODO: descripción genérica, sin datos del cliente.",
+      "en": "TODO: generic description, no client data."
+    },
+    "category": "web-apps",
+    "technologies": ["Auth.js", "Next.js", "Prisma", "React", "TypeScript"],
+    "year": 2023,
+    "featured": false,
+    "visible": false,
+    "order": 47
   }
 ]

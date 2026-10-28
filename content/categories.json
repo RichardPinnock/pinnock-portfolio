@@ -5,19 +5,34 @@
     "order": 0
   },
   {
-    "id": "mobile",
-    "name": { "es": "Apps móviles", "en": "Mobile apps" },
+    "id": "ecommerce",
+    "name": { "es": "E-commerce", "en": "E-commerce" },
     "order": 1
   },
   {
-    "id": "integrations",
-    "name": { "es": "Integraciones y APIs", "en": "Integrations and APIs" },
+    "id": "business-systems",
+    "name": { "es": "Gestión y POS", "en": "Business systems and POS" },
     "order": 2
   },
   {
-    "id": "crm-erp",
-    "name": { "es": "CRM y ERP", "en": "CRM and ERP" },
+    "id": "mobile",
+    "name": { "es": "Apps móviles", "en": "Mobile apps" },
     "order": 3
+  },
+  {
+    "id": "ai",
+    "name": { "es": "IA y chatbots", "en": "AI and chatbots" },
+    "order": 4
+  },
+  {
+    "id": "integrations",
+    "name": { "es": "APIs e integraciones", "en": "APIs and integrations" },
+    "order": 5
+  },
+  {
+    "id": "crm-erp",
+    "name": { "es": "CRM y ERP (Odoo)", "en": "CRM and ERP (Odoo)" },
+    "order": 6
   },
   {
     "id": "devops",
@@ -25,7 +40,6 @@
       "es": "DevOps e infraestructura",
       "en": "DevOps and infrastructure"
     },
-    "order": 4
-  },
-  { "id": "tools", "name": { "es": "Herramientas", "en": "Tools" }, "order": 5 }
+    "order": 7
+  }
 ]
