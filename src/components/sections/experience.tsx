@@ -22,34 +22,33 @@ const formatMonth = (value: string) => `${value.slice(5)}/${value.slice(0, 4)}`;
 
 export function Experience({ items, messages }: ExperienceProps) {
   return (
-    <Section id="experience" eyebrow={messages.eyebrow} title={messages.title}>
-      <ol className="relative space-y-10 border-border border-l pl-6 sm:pl-8">
+    <Section id="experience" title={messages.title}>
+      <ul className="flex flex-col gap-8">
         {items.map((item) => (
-          <li key={item.id} className="reveal relative">
-            <span
-              aria-hidden
-              className="absolute top-2 -left-[1.9rem] size-3 rounded-full border-2 border-brand-400 bg-background sm:-left-[2.4rem]"
-            />
+          <li key={item.id} className="reveal">
+            <div className="flex items-baseline justify-between gap-4">
+              <h3 className="font-heading font-semibold text-lg">
+                {item.company}
+              </h3>
+              <p className="shrink-0 text-muted-foreground text-xs tabular-nums">
+                <time dateTime={item.start}>{formatMonth(item.start)}</time>
+                {" - "}
+                {item.end ? (
+                  <time dateTime={item.end}>{formatMonth(item.end)}</time>
+                ) : (
+                  messages.present
+                )}
+              </p>
+            </div>
             <p className="text-muted-foreground text-sm">
-              <time dateTime={item.start}>{formatMonth(item.start)}</time>
-              {" – "}
-              {item.end ? (
-                <time dateTime={item.end}>{formatMonth(item.end)}</time>
-              ) : (
-                messages.present
-              )}
+              {item.role}
+              {item.location ? `, ${item.location}` : ""}
             </p>
-            <h3 className="mt-1 text-xl font-semibold">
-              {item.role} · {item.company}
-            </h3>
-            {item.location ? (
-              <p className="text-muted-foreground text-sm">{item.location}</p>
-            ) : null}
-            <p className="mt-3 max-w-prose text-muted-foreground">
+            <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
               {item.summary}
             </p>
             {item.highlights.length > 0 ? (
-              <ul className="mt-3 max-w-prose list-disc space-y-1 pl-5 text-muted-foreground">
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-muted-foreground text-sm">
                 {item.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}
@@ -59,14 +58,14 @@ export function Experience({ items, messages }: ExperienceProps) {
               <ul className="mt-4 flex flex-wrap gap-1.5">
                 {item.technologies.map((tech) => (
                   <li key={tech}>
-                    <Badge variant="secondary">{tech}</Badge>
+                    <Badge variant="outline">{tech}</Badge>
                   </li>
                 ))}
               </ul>
             ) : null}
           </li>
         ))}
-      </ol>
+      </ul>
     </Section>
   );
 }

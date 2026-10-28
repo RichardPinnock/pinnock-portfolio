@@ -34,21 +34,21 @@ const serviceIcons: Record<string, LucideIcon> = {
 
 export function Services({ services, messages }: ServicesProps) {
   return (
-    <Section id="services" eyebrow={messages.eyebrow} title={messages.title}>
-      <BentoGrid className="max-w-none md:auto-rows-[12.5rem]">
+    <Section id="services" title={messages.title}>
+      <BentoGrid className="max-w-none gap-3 md:auto-rows-auto md:grid-cols-2">
         {services.map((service, index) => {
           const Icon = serviceIcons[service.id] ?? Sparkles;
           return (
             <BentoGridItem
               key={service.id}
-              // The first card spans two columns to give the grid its bento rhythm.
+              // The first card spans both columns: 5 services fill a 2-column grid with no empty cell.
               className={cn("reveal", index === 0 && "md:col-span-2")}
               icon={
-                <span className="inline-flex size-10 items-center justify-center rounded-lg bg-brand-950 text-brand-300">
+                <span className="inline-flex size-10 items-center justify-center rounded-md bg-brand-950 text-brand-300 ring-1 ring-brand-800/60">
                   <Icon aria-hidden className="size-5" />
                 </span>
               }
-              title={<h3 className="font-heading text-xl">{service.title}</h3>}
+              title={<h3 className="font-heading text-lg">{service.title}</h3>}
               description={
                 <>
                   {service.description}

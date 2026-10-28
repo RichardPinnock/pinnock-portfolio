@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { DockNav, type DockSection } from "@/components/layout/dock-nav";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { type NavItem, SiteHeader } from "@/components/layout/site-header";
 import { SkipLink } from "@/components/layout/skip-link";
 import { About } from "@/components/sections/about";
 import { Contact } from "@/components/sections/contact";
+import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
 import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
@@ -13,6 +14,7 @@ import { Skills } from "@/components/sections/skills";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getMessages } from "@/i18n/messages";
 import {
+  getEducation,
   getExperience,
   getProfile,
   getProjectsView,
@@ -45,24 +47,26 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const profile = getProfile(locale);
   const services = getServices(locale);
   const experience = getExperience(locale);
+  const education = getEducation(locale);
   const skills = getSkillGroups(locale);
   const { projects, categories } = getProjectsView(locale);
 
-  // Sections without content (e.g. no visible projects yet) are left out of the page and the nav.
-  const nav: NavItem[] = [
-    { href: "#about", label: t.nav.about },
-    ...(services.length > 0
-      ? [{ href: "#services", label: t.nav.services }]
-      : []),
-    ...(projects.length > 0
-      ? [{ href: "#projects", label: t.nav.projects }]
-      : []),
+  // Sections without content (e.g. no experience yet) are left out of the page and the dock.
+  const sections: DockSection[] = [
+    { id: "top", label: t.nav.home },
+    { id: "about", label: t.nav.about },
+    ...(services.length > 0 ? [{ id: "services", label: t.nav.services }] : []),
+    ...(projects.length > 0 ? [{ id: "projects", label: t.nav.projects }] : []),
     ...(experience.length > 0
-      ? [{ href: "#experience", label: t.nav.experience }]
+      ? [{ id: "experience", label: t.nav.experience }]
       : []),
-    ...(skills.length > 0 ? [{ href: "#stack", label: t.nav.stack }] : []),
-    { href: "#contact", label: t.nav.contact },
+    ...(education.length > 0
+      ? [{ id: "education", label: t.nav.education }]
+      : []),
+    ...(skills.length > 0 ? [{ id: "stack", label: t.nav.stack }] : []),
+    { id: "contact", label: t.nav.contact },
   ];
+  const other = otherLocale(locale);
 
   return (
     <>
@@ -70,28 +74,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         data={buildJsonLd(locale, env.NEXT_PUBLIC_SITE_URL, t.breadcrumb.home)}
       />
       <SkipLink label={t.skipToContent} />
-      <SiteHeader
-        name={profile.name}
-        items={nav}
-        switcher={{
-          href: `/${otherLocale(locale)}`,
-          locale: otherLocale(locale),
-          code: t.language.otherCode,
-          name: t.language.otherName,
-          label: t.language.switchTo,
-        }}
-        labels={{
-          nav: t.nav.label,
-          open: t.nav.openMenu,
-          close: t.nav.closeMenu,
-        }}
-      />
-      <main id="main">
+      <main
+        id="main"
+        className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-16 px-6 pt-14 pb-32 sm:pt-20"
+      >
         <Hero
           name={profile.name}
-          role={profile.role}
           headline={profile.headline}
-          country={profile.country}
           origin={profile.origin}
           clientCountries={profile.clientCountries}
           cvHref={cvPath(profile.name, locale)}
@@ -117,6 +106,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         {experience.length > 0 ? (
           <Experience items={experience} messages={t.experience} />
         ) : null}
+        {education.length > 0 ? (
+          <Education items={education} messages={t.education} />
+        ) : null}
         {skills.length > 0 ? (
           <Skills groups={skills} messages={t.stack} />
         ) : null}
@@ -125,12 +117,23 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           socials={profile.socials}
           messages={t.contact}
         />
+        <SiteFooter
+          name={profile.name}
+          rights={t.footer.rights}
+          builtWith={t.footer.builtWith}
+          repoUrl={profile.repositoryUrl}
+        />
       </main>
-      <SiteFooter
-        name={profile.name}
-        rights={t.footer.rights}
-        builtWith={t.footer.builtWith}
-        repoUrl={profile.repositoryUrl}
+      <DockNav
+        label={t.nav.label}
+        sections={sections}
+        socials={profile.socials}
+        switcher={{
+          href: `/${other}`,
+          locale: other,
+          code: t.language.otherCode,
+          label: t.language.switchTo,
+        }}
       />
     </>
   );

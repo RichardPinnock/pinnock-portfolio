@@ -6,7 +6,9 @@
     "switchTo": "Cambiar el idioma a inglés"
   },
   "skipToContent": "Saltar al contenido",
-  "breadcrumb": { "home": "Inicio" },
+  "breadcrumb": {
+    "home": "Inicio"
+  },
   "nav": {
     "label": "Principal",
     "about": "Quién soy",
@@ -16,26 +18,26 @@
     "stack": "Stack",
     "contact": "Contacto",
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "home": "Inicio",
+    "education": "Formación"
   },
   "hero": {
     "contact": "Contactar",
     "downloadCv": "Descargar CV",
-    "mapCaption": "Mapa mundial con conexiones desde Cuba hacia los países de mis clientes."
+    "mapCaption": "Mapa mundial con conexiones desde Cuba hacia los países de mis clientes.",
+    "greeting": "Hola, soy {name}"
   },
   "about": {
-    "eyebrow": "Quién soy",
     "title": "De dónde vengo",
     "location": "Con base en",
     "languages": "Idiomas"
   },
   "services": {
-    "eyebrow": "Qué hago",
     "title": "Servicios",
     "stack": "Tecnologías"
   },
   "projects": {
-    "eyebrow": "Qué he hecho",
     "title": "Proyectos",
     "filterLabel": "Filtrar por categoría",
     "all": "Todos",
@@ -44,16 +46,13 @@
     "featured": "Destacado"
   },
   "experience": {
-    "eyebrow": "Trayectoria",
     "title": "Experiencia",
     "present": "Actualidad"
   },
   "stack": {
-    "eyebrow": "Herramientas",
     "title": "Stack tecnológico"
   },
   "contact": {
-    "eyebrow": "Hablemos",
     "title": "Contacto",
     "intro": "¿Tienes un proyecto en mente? Cuéntame qué necesitas y vemos cómo ayudarte.",
     "email": "Escríbeme a",
@@ -67,5 +66,9 @@
     "title": "Página no encontrada",
     "text": "La página que buscas no existe o se ha movido.",
     "back": "Volver al inicio"
+  },
+  "education": {
+    "title": "Formación",
+    "present": "Actualidad"
   }
 }

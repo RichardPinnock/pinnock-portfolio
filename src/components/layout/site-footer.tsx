@@ -12,23 +12,21 @@ export function SiteFooter({
   repoUrl,
 }: SiteFooterProps) {
   return (
-    <footer className="border-border border-t py-8">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 text-muted-foreground text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <p>
-          © {name}. {rights}
-        </p>
-        <p>
-          {builtWith}{" "}
-          <a
-            href={repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            GitHub
-          </a>
-        </p>
-      </div>
+    <footer className="flex flex-col gap-1 border-border border-t pt-8 text-muted-foreground text-sm">
+      <p>
+        © {name}. {rights}
+      </p>
+      <p>
+        {builtWith}{" "}
+        <a
+          href={repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          GitHub
+        </a>
+      </p>
     </footer>
   );
 }

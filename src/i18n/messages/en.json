@@ -6,7 +6,9 @@
     "switchTo": "Switch the language to Spanish"
   },
   "skipToContent": "Skip to content",
-  "breadcrumb": { "home": "Home" },
+  "breadcrumb": {
+    "home": "Home"
+  },
   "nav": {
     "label": "Main",
     "about": "About",
@@ -16,26 +18,26 @@
     "stack": "Stack",
     "contact": "Contact",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "home": "Home",
+    "education": "Education"
   },
   "hero": {
     "contact": "Get in touch",
     "downloadCv": "Download CV",
-    "mapCaption": "Map with connections from Cuba to the countries of my clients."
+    "mapCaption": "Map with connections from Cuba to the countries of my clients.",
+    "greeting": "Hi, I'm {name}"
   },
   "about": {
-    "eyebrow": "About me",
     "title": "Where I come from",
     "location": "Based in",
     "languages": "Languages"
   },
   "services": {
-    "eyebrow": "What I do",
     "title": "Services",
     "stack": "Technologies"
   },
   "projects": {
-    "eyebrow": "What I have built",
     "title": "Projects",
     "filterLabel": "Filter by category",
     "all": "All",
@@ -44,16 +46,13 @@
     "featured": "Featured"
   },
   "experience": {
-    "eyebrow": "Track record",
     "title": "Experience",
     "present": "Present"
   },
   "stack": {
-    "eyebrow": "Toolbox",
     "title": "Tech stack"
   },
   "contact": {
-    "eyebrow": "Let's talk",
     "title": "Contact",
     "intro": "Have a project in mind? Tell me what you need and let's see how I can help.",
     "email": "Write to me at",
@@ -67,5 +66,9 @@
     "title": "Page not found",
     "text": "The page you are looking for does not exist or has moved.",
     "back": "Back to home"
+  },
+  "education": {
+    "title": "Education",
+    "present": "Present"
   }
 }
