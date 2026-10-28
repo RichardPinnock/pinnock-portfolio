@@ -1,5 +1,6 @@
 import type { z } from "zod";
 import { categoriesSchema } from "./schemas/categories.ts";
+import { educationSchema } from "./schemas/education.ts";
 import { experienceSchema } from "./schemas/experience.ts";
 import { profileSchema } from "./schemas/profile.ts";
 import { projectsSchema } from "./schemas/projects.ts";
@@ -13,6 +14,7 @@ export const contentSchemas = {
   profile: profileSchema,
   services: servicesSchema,
   experience: experienceSchema,
+  education: educationSchema,
   projects: projectsSchema,
   categories: categoriesSchema,
   skills: skillsSchema,
@@ -59,6 +61,7 @@ export function parseContent(raw: RawContent): Content {
     for (const [file, items] of [
       ["services", content.services],
       ["experience", content.experience],
+      ["education", content.education],
       ["projects", content.projects],
       ["categories", content.categories],
       ["skills", content.skills],
