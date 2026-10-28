@@ -80,14 +80,31 @@ export function getExperience(locale: Locale) {
     }));
 }
 
+/**
+ * Skills written by hand in skills.json win. Until there are any, the stack is derived from the
+ * technologies of the published projects (most used first), so nothing is invented. A derived group has
+ * an empty `name`: the UI renders it as one flat list.
+ */
 export function getSkillGroups(locale: Locale) {
-  return byOrder(content.skills)
+  const authored = byOrder(content.skills)
     .map((group) => ({
       id: group.id,
       name: localize(group.name, locale),
       items: real(group.items),
     }))
     .filter((group) => group.items.length > 0);
+  if (authored.length > 0) return authored;
+
+  const counts = new Map<string, number>();
+  for (const project of getProjectsView(locale).projects) {
+    for (const tech of project.technologies) {
+      counts.set(tech, (counts.get(tech) ?? 0) + 1);
+    }
+  }
+  const items = [...counts]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([tech]) => tech);
+  return items.length > 0 ? [{ id: "from-projects", name: "", items }] : [];
 }
 
 export function getProjectsView(locale: Locale) {

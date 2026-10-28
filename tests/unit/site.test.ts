@@ -57,6 +57,14 @@ describe("rendered content selectors", () => {
     expect(rendered).not.toMatch(/\bTODO\b/);
   });
 
+  it("derive the stack from the technologies of the published projects", () => {
+    const { projects } = getProjectsView("es");
+    const [group] = getSkillGroups("es");
+    const used = new Set(projects.flatMap((p) => p.technologies));
+    expect(group.items.length).toBe(used.size);
+    expect(group.items.every((item) => used.has(item))).toBe(true);
+  });
+
   it("only list categories that have visible projects", () => {
     const { projects, categories } = getProjectsView("es");
     const used = new Set(projects.map((p) => p.category));
