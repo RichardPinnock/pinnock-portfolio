@@ -25,6 +25,7 @@ export function buildJsonLd(
         jobTitle: profile.role,
         description: profile.headline,
         url: pageUrl,
+        image: `${siteUrl}/profile.jpg`,
         email: `mailto:${profile.email}`,
         telephone: profile.whatsapp,
         address: {

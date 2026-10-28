@@ -1,9 +1,9 @@
 import { ArrowDownToLine, Mail } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import WorldMap from "@/components/ui/world-map";
 import type { Messages } from "@/i18n/messages";
 import { format } from "@/i18n/messages";
-import { initials } from "@/lib/brand";
 import { countryCenters } from "@/lib/countries";
 
 interface HeroProps {
@@ -60,13 +60,16 @@ export function Hero({
             </Button>
           </div>
         </div>
-        {/* Initials stand in for a photo until one is added. */}
-        <div
-          aria-hidden
-          className="flex size-24 shrink-0 items-center justify-center rounded-md border bg-brand-950 font-heading font-semibold text-3xl text-brand-300 shadow-lg ring-4 ring-muted sm:size-28"
-        >
-          {initials(name)}
-        </div>
+        {/* The one round element on the page: a photo is the usual exception to the square shape language. */}
+        <Image
+          src="/profile.jpg"
+          alt={name}
+          width={256}
+          height={256}
+          priority
+          unoptimized
+          className="size-24 shrink-0 rounded-full border object-cover shadow-lg ring-4 ring-muted sm:size-28"
+        />
       </div>
       <div role="img" aria-label={messages.mapCaption}>
         <WorldMap dots={connections} lineColor="oklch(0.7 0.15 285)" />
