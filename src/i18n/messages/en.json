@@ -1,4 +1,10 @@
 {
+  "language": {
+    "label": "Language",
+    "otherName": "Español",
+    "otherCode": "ES",
+    "switchTo": "Switch the language to Spanish"
+  },
   "skipToContent": "Skip to content",
   "nav": {
     "label": "Main",

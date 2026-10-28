@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { type NavItem, SiteHeader } from "@/components/layout/site-header";
 import { SkipLink } from "@/components/layout/skip-link";
@@ -17,12 +19,25 @@ import {
   getSkillGroups,
 } from "@/lib/content";
 import { cvPath } from "@/lib/cv";
-import { defaultLocale } from "@/lib/schemas/common";
+import { hasLocale, otherLocale } from "@/lib/locale";
+import { locales } from "@/lib/schemas/common";
+import { alternatesFor } from "@/lib/seo";
 
-// Phase 7 moves this page under a locale segment; until then Spanish is the only locale.
-const locale = defaultLocale;
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
 
-export default function Home() {
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+  return { alternates: alternatesFor(lang) };
+}
+
+export default async function Home({ params }: PageProps<"/[lang]">) {
+  const { lang: locale } = await params;
+  if (!hasLocale(locale)) notFound();
   const t = getMessages(locale);
   const profile = getProfile(locale);
   const services = getServices(locale);
@@ -52,6 +67,13 @@ export default function Home() {
       <SiteHeader
         name={profile.name}
         items={nav}
+        switcher={{
+          href: `/${otherLocale(locale)}`,
+          locale: otherLocale(locale),
+          code: t.language.otherCode,
+          name: t.language.otherName,
+          label: t.language.switchTo,
+        }}
         labels={{
           nav: t.nav.label,
           open: t.nav.openMenu,
