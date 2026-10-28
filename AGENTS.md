@@ -32,7 +32,7 @@ Package manager: pnpm. Node version in `.nvmrc`.
 | Contrast (WCAG AA) | `pnpm contrast` — run after touching theme tokens in `globals.css` |
 | Unit tests | `pnpm test` (added in phase 4) |
 | E2E tests | `pnpm e2e` (added in phase 9) |
-| Generate CV PDFs | `pnpm cv` (added in phase 8) |
+| Generate CV PDFs | `pnpm cv` — writes the git-ignored `public/cv/*.pdf` from the content JSON; also runs in `prebuild` |
 | Analyze repos | `pnpm analyze-repos [owner]` — read-only, writes the git-ignored `content/projects.draft.json` (needs `gh`; set `GH_BIN` if not on PATH) |
 
 ## Structure
