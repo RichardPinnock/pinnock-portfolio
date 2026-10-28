@@ -31,6 +31,16 @@
       "network": "GitHub",
       "url": "https://github.com/RichardPinnock",
       "handle": "RichardPinnock"
+    },
+    {
+      "network": "LinkedIn",
+      "url": "https://www.linkedin.com/in/richard-pinnock-230b85271/",
+      "handle": "richard-pinnock-230b85271"
+    },
+    {
+      "network": "Instagram",
+      "url": "https://www.instagram.com/richard_pinnock_/",
+      "handle": "richard_pinnock_"
     }
   ],
   "languages": [
@@ -42,7 +52,7 @@
     {
       "code": "en",
       "name": { "es": "Inglés", "en": "English" },
-      "level": { "es": "TODO", "en": "TODO" }
+      "level": { "es": "Intermedio alto (B2)", "en": "Upper intermediate (B2)" }
     }
   ]
 }
