@@ -14,8 +14,7 @@
   "hero": {
     "contact": "Get in touch",
     "downloadCv": "Download CV",
-    "agencyPrefix": "Founder of",
-    "globeCaption": "Globe with connections from Cuba to the countries of my clients."
+    "mapCaption": "Map with connections from Cuba to the countries of my clients."
   },
   "about": {
     "eyebrow": "About me",
