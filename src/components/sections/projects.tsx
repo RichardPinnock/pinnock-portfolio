@@ -17,7 +17,7 @@ interface ProjectsProps {
 
 export function Projects({ projects, categories, messages }: ProjectsProps) {
   return (
-    <Section id="projects" eyebrow={messages.eyebrow} title={messages.title}>
+    <Section id="projects" title={messages.title}>
       <ProjectsFilter
         projects={projects}
         categories={categories}

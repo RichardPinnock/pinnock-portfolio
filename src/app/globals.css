@@ -23,21 +23,6 @@
 }
 
 /* Used by the Aceternity Spotlight; the source defines it in tailwind.config. */
-@theme {
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
-
-  @keyframes spotlight {
-    0% {
-      opacity: 0;
-      transform: translate(-72%, -62%) scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -40%) scale(1);
-    }
-  }
-}
-
 @theme inline {
   --font-heading: var(--font-bricolage);
   --font-sans:
@@ -110,7 +95,7 @@
   --chart-3: oklch(0.56 0.19 285);
   --chart-4: oklch(0.5 0.19 285);
   --chart-5: oklch(0.43 0.17 285);
-  --radius: 0.75rem;
+  --radius: 0.25rem;
   --sidebar: oklch(0.185 0.014 275);
   --sidebar-foreground: oklch(0.96 0.008 275);
   --sidebar-primary: oklch(0.56 0.19 285);
@@ -149,11 +134,13 @@
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(1.5rem);
+    transform: translateY(0.75rem);
+    filter: blur(6px);
   }
   to {
     opacity: 1;
     transform: none;
+    filter: blur(0);
   }
 }
 
