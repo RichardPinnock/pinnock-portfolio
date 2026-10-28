@@ -64,7 +64,6 @@ export default function Home() {
           role={profile.role}
           headline={profile.headline}
           country={profile.country}
-          agency={profile.agency}
           origin={profile.origin}
           clientCountries={profile.clientCountries}
           cvHref={cvPath(profile.name, locale)}

@@ -14,8 +14,7 @@
   "hero": {
     "contact": "Contactar",
     "downloadCv": "Descargar CV",
-    "agencyPrefix": "Fundador de",
-    "globeCaption": "Globo terráqueo con conexiones desde Cuba hacia los países de mis clientes."
+    "mapCaption": "Mapa mundial con conexiones desde Cuba hacia los países de mis clientes."
   },
   "about": {
     "eyebrow": "Quién soy",
