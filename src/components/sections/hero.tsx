@@ -1,5 +1,6 @@
 import { ArrowDownToLine, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Spotlight } from "@/components/ui/spotlight";
 import WorldMap from "@/components/ui/world-map";
 import type { Messages } from "@/i18n/messages";
 import { countryCenters } from "@/lib/countries";
@@ -44,7 +45,11 @@ export function Hero({
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_30%,var(--color-brand-900),transparent_70%)] opacity-70"
       />
-      <div className="relative mx-auto grid min-h-[calc(100svh-4rem)] w-full max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:py-24">
+      <Spotlight
+        className="-top-40 left-0 md:-top-20 md:left-60"
+        fill="oklch(0.7 0.15 285)"
+      />
+      <div className="relative z-10 mx-auto grid min-h-[calc(100svh-4rem)] w-full max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:py-24">
         <div className="min-w-0">
           <p className="mb-5 font-medium text-brand-300 text-sm uppercase tracking-[0.14em]">
             {name} · {role} · {country}
