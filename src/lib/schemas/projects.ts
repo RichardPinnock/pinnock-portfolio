@@ -5,7 +5,8 @@ import { localizedString, order, slug } from "./common.ts";
 // that could identify a client or a private repository belongs in this file.
 export const projectSchema = z.object({
   id: slug,
-  name: z.string().min(1),
+  /** Generic and client-neutral: it is published as written. */
+  name: localizedString,
   description: localizedString,
   /** Must match a category `id` in categories.json (checked in parseContent). */
   category: slug,
