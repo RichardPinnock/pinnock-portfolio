@@ -1,5 +1,8 @@
-// Aceternity UI "spotlight". Only change from the source: the SVG is marked decorative (aria-hidden) and
-// the unused React import is gone. `animate-spotlight` is defined in globals.css.
+// Aceternity UI "spotlight". Changes from the source:
+// - Decorative: the SVG is aria-hidden and the unused React import is gone.
+// - The ellipse is softened with a radial gradient instead of an SVG Gaussian blur (stdDeviation 151) over a
+//   3787x2842 canvas. The look is the same, but the filter cost ~1 s of main-thread rendering on mobile.
+// `animate-spotlight` is defined in globals.css.
 import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
@@ -20,39 +23,20 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       viewBox="0 0 3787 2842"
       fill="none"
     >
-      <g filter="url(#filter)">
-        <ellipse
-          cx="1924.71"
-          cy="273.501"
-          rx="1924.71"
-          ry="273.501"
-          transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-          fill={fill || "white"}
-          fillOpacity="0.21"
-        ></ellipse>
-      </g>
+      <ellipse
+        cx="1924.71"
+        cy="273.501"
+        rx="1924.71"
+        ry="273.501"
+        transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
+        fill="url(#spotlight-gradient)"
+      />
       <defs>
-        <filter
-          id="filter"
-          x="0.860352"
-          y="0.838989"
-          width="3785.16"
-          height="2840.26"
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          ></feBlend>
-          <feGaussianBlur
-            stdDeviation="151"
-            result="effect1_foregroundBlur_1065_8"
-          ></feGaussianBlur>
-        </filter>
+        <radialGradient id="spotlight-gradient">
+          <stop offset="0" stopColor={fill || "white"} stopOpacity="0.3" />
+          <stop offset="0.55" stopColor={fill || "white"} stopOpacity="0.12" />
+          <stop offset="1" stopColor={fill || "white"} stopOpacity="0" />
+        </radialGradient>
       </defs>
     </svg>
   );

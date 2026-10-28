@@ -1,10 +1,17 @@
+import dynamic from "next/dynamic";
 import { Section } from "@/components/section";
 import type { Messages } from "@/i18n/messages";
-import { ProjectsFilter } from "./projects-filter";
+import type { ProjectsFilterProps } from "./projects-filter";
+
+// Split into its own chunk: it pulls in Motion, which the rest of the page does not need, and it is
+// only downloaded when there is at least one visible project to filter.
+const ProjectsFilter = dynamic(() =>
+  import("./projects-filter").then((module) => module.ProjectsFilter),
+);
 
 interface ProjectsProps {
-  projects: React.ComponentProps<typeof ProjectsFilter>["projects"];
-  categories: React.ComponentProps<typeof ProjectsFilter>["categories"];
+  projects: ProjectsFilterProps["projects"];
+  categories: ProjectsFilterProps["categories"];
   messages: Messages["projects"];
 }
 
