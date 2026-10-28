@@ -111,7 +111,7 @@
     @apply bg-background text-foreground antialiased;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
   }
   h1,
   h2,
@@ -126,7 +126,32 @@
   }
 }
 
+/* Scroll-driven reveal: pure CSS, so content is fully visible without JavaScript and in
+   browsers that lack `animation-timeline`. */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+
   *,
   *::before,
   *::after {
