@@ -3,6 +3,7 @@ import en from "../../src/i18n/messages/en.json";
 import es from "../../src/i18n/messages/es.json";
 import {
   content,
+  getEducation,
   getExperience,
   getProfile,
   getProjectsView,
@@ -49,6 +50,7 @@ describe("rendered content selectors", () => {
       profile: getProfile(locale),
       services: getServices(locale),
       experience: getExperience(locale),
+      education: getEducation(locale),
       skills: getSkillGroups(locale),
       projects: getProjectsView(locale),
     });

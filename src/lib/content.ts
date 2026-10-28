@@ -1,4 +1,5 @@
 import categories from "../../content/categories.json";
+import education from "../../content/education.json";
 import experience from "../../content/experience.json";
 import profile from "../../content/profile.json";
 import projects from "../../content/projects.json";
@@ -12,6 +13,7 @@ export const content: Content = parseContent({
   profile,
   services,
   experience,
+  education,
   projects,
   categories,
   skills,
@@ -105,4 +107,16 @@ export function getProjectsView(locale: Locale) {
     .filter((c) => used.has(c.id))
     .map((c) => ({ id: c.id, name: localize(c.name, locale) }));
   return { projects: visible, categories: filters };
+}
+
+export function getEducation(locale: Locale) {
+  return byOrder(content.education)
+    .filter((item) => item.visible && !isPlaceholder(item.institution))
+    .map((item) => ({
+      id: item.id,
+      title: localize(item.title, locale),
+      institution: item.institution,
+      start: item.start,
+      end: item.end,
+    }));
 }

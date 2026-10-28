@@ -1,0 +1,11 @@
+[
+  {
+    "id": "todo-example-education",
+    "title": { "es": "TODO: titulación", "en": "TODO: degree" },
+    "institution": "TODO",
+    "start": "2000-01",
+    "end": null,
+    "visible": false,
+    "order": 0
+  }
+]
