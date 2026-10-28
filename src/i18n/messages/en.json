@@ -40,7 +40,8 @@
     "filterLabel": "Filter by category",
     "all": "All",
     "count": "{count} projects",
-    "countOne": "1 project"
+    "countOne": "1 project",
+    "featured": "Featured"
   },
   "experience": {
     "eyebrow": "Track record",
