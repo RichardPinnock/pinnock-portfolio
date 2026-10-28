@@ -23,7 +23,7 @@
     "countryCode": "CU",
     "coordinates": [23.1136, -82.3666]
   },
-  "clientCountries": ["ES"],
+  "clientCountries": ["ES", "PT", "MX", "CN", "CL", "US"],
   "email": "phoenixpinnock@gmail.com",
   "agency": { "name": "FireNest", "url": "https://firenest.info" },
   "repositoryUrl": "https://github.com/RichardPinnock/pinnock-portfolio",
