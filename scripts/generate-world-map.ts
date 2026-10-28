@@ -25,7 +25,8 @@ const commands = points.map((point) => {
 });
 
 const svg =
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${HEIGHT}">` +
+  // preserveAspectRatio="none": the image fills its 2:1 box exactly, matching the marker coordinates.
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${HEIGHT}" preserveAspectRatio="none">` +
   `<path fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="${RADIUS * 2}" stroke-linecap="round" d="${commands.join("")}"/>` +
   `</svg>\n`;
 
