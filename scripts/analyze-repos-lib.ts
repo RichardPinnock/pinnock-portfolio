@@ -103,12 +103,14 @@ export function detectTechnologies(
 
 export type CategoryId =
   | "web-apps"
+  | "ecommerce"
+  | "business-systems"
   | "mobile"
+  | "ai"
   | "integrations"
   | "crm-erp"
   | "devops"
-  | "ai"
-  | "tools";
+  | "todo";
 
 const FRONTEND = ["Next.js", "React", "Vue", "Nuxt", "Angular", "Vite"];
 const BACKEND = [
@@ -122,7 +124,15 @@ const BACKEND = [
   "GraphQL",
 ];
 
-/** First matching rule wins; order encodes priority (e.g. a mobile app is not a "web app"). */
+/** Matches a whole word even when it is delimited by `_` or `-`, which `\b` would not treat as a boundary. */
+const word = (...words: string[]) =>
+  new RegExp(`(^|[^a-z])(${words.join("|")})([^a-z]|$)`, "i");
+
+/**
+ * First matching rule wins; order encodes priority (e.g. a mobile app is not a "web app").
+ * `todo` means "could not tell": it is deliberately not a real category, so a draft entry
+ * left unreviewed fails the cross-file validation instead of being published under a guess.
+ */
 export function classify(
   technologies: string[],
   repoName: string,
@@ -132,17 +142,21 @@ export function classify(
     names.some((n) => technologies.includes(n));
   const text = `${repoName} ${description ?? ""}`;
 
-  if (
-    has("Odoo", "Vendure") ||
-    /(^|[^a-z])(odoo|erp|crm)([^a-z]|$)/i.test(text)
-  )
-    return "crm-erp";
+  if (has("Odoo") || word("odoo", "erp", "crm").test(text)) return "crm-erp";
   if (has("React Native", "Expo")) return "mobile";
   if (has("OpenAI API", "LangChain")) return "ai";
   if (has("WhatsApp", "Twilio")) return "integrations";
+  if (has("Stripe", "Vendure") || /commerce|shop|store|cosmetic/i.test(text))
+    return "ecommerce";
+  // Back-office apps share one shape here: login + database behind a Next.js UI.
+  if (
+    word("pos").test(text) ||
+    (has("Next.js") && has("Prisma") && has("Auth.js") && has("PostgreSQL"))
+  )
+    return "business-systems";
   if (has(...FRONTEND)) return "web-apps";
   if (has(...BACKEND)) return "integrations";
   if (technologies.length > 0 && technologies.every((t) => t === "Docker"))
     return "devops";
-  return "tools";
+  return "todo";
 }

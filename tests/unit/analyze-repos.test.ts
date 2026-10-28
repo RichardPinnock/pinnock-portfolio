@@ -71,15 +71,39 @@ describe("classify", () => {
 
   it("detects ERP/CRM from the repo name even when separated by underscores", () => {
     expect(classify(["Python"], "client_odoo_addons", null)).toBe("crm-erp");
-    expect(classify(["TypeScript"], "mycrm", null)).toBe("tools");
+    expect(classify(["TypeScript"], "mycrm", null)).toBe("todo");
+  });
+
+  it("classifies storefronts as ecommerce, ahead of generic web apps", () => {
+    expect(classify(["Next.js", "React", "Stripe"], "site", null)).toBe(
+      "ecommerce",
+    );
+    expect(classify(["Next.js", "React"], "next-commerce", null)).toBe(
+      "ecommerce",
+    );
+  });
+
+  it("classifies login + database Next.js apps and POS repos as business systems", () => {
+    const stack = ["Auth.js", "Next.js", "PostgreSQL", "Prisma", "React"];
+    expect(classify(stack, "internal-tool", null)).toBe("business-systems");
+    expect(classify(["Next.js", "React"], "client", "Machete POS")).toBe(
+      "business-systems",
+    );
+    expect(classify(["Next.js", "React"], "pos_system", null)).toBe(
+      "business-systems",
+    );
+  });
+
+  it("classifies OpenAI-based repos as ai even when they have a web UI", () => {
+    expect(classify(["Next.js", "OpenAI API"], "chatbot", null)).toBe("ai");
   });
 
   it("classifies messaging bots as integrations before web apps", () => {
     expect(classify(["Express", "WhatsApp"], "bot", null)).toBe("integrations");
   });
 
-  it("classifies Docker-only repos as devops and unknowns as tools", () => {
+  it("classifies Docker-only repos as devops and unknowns as todo", () => {
     expect(classify(["Docker"], "infra", null)).toBe("devops");
-    expect(classify(["Shell"], "scripts", null)).toBe("tools");
+    expect(classify(["Shell"], "scripts", null)).toBe("todo");
   });
 });

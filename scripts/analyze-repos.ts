@@ -5,6 +5,7 @@
 // Usage: pnpm analyze-repos [owner] [--include-forks]
 // Set GH_BIN if `gh` is not on PATH.
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { writeFileSync } from "node:fs";
 import {
   type CategoryId,
@@ -132,7 +133,8 @@ const analyzed = candidates
 
 const draft = analyzed.map(({ repo, technologies, category }, index) => ({
   // Neutral ids/names on purpose: repo names and descriptions can identify clients.
-  id: `project-${String(index + 1).padStart(3, "0")}`,
+  // A short hash keeps ids stable between runs without exposing the repo name.
+  id: `project-${createHash("sha256").update(`${owner}/${repo.name}`).digest("hex").slice(0, 8)}`,
   name: "TODO",
   description: {
     es: "TODO: descripción genérica, sin datos del cliente.",
