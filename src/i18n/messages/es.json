@@ -1,4 +1,10 @@
 {
+  "language": {
+    "label": "Idioma",
+    "otherName": "English",
+    "otherCode": "EN",
+    "switchTo": "Cambiar el idioma a inglés"
+  },
   "skipToContent": "Saltar al contenido",
   "nav": {
     "label": "Principal",

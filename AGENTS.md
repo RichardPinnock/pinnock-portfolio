@@ -38,6 +38,7 @@ Package manager: pnpm. Node version in `.nvmrc`.
 ## Structure
 
 - `content/` — all site content as JSON (single source of truth, also feeds the CV).
+- `src/app/[lang]/` — every route lives under a locale (`/es`, `/en`); `src/proxy.ts` redirects URLs without one using `Accept-Language`. UI strings are in `src/i18n/messages/{es,en}.json` (both must define the same keys), site copy in `/content`. New pages must be added under `[lang]` and export `generateMetadata` with `alternatesFor()` from `src/lib/seo.ts`.
 - `src/app/` — routes; `src/components/ui/` — shadcn/Cult UI; `src/components/` — own components.
 - `src/lib/schemas/` — one Zod schema per content file; `src/lib/` — shared helpers.
 - `scripts/` — repo analysis, CV generation, content validation.
