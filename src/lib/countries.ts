@@ -3,6 +3,7 @@ export const countryCenters: Record<string, [number, number]> = {
   AR: [-38.42, -63.62],
   CA: [56.13, -106.35],
   CL: [-35.68, -71.54],
+  CN: [35.86, 104.2],
   CO: [4.57, -74.3],
   DE: [51.17, 10.45],
   DO: [18.74, -70.16],
