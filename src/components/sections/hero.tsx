@@ -42,7 +42,7 @@ export function Hero({
           >
             {format(messages.greeting, { name: name.split(" ")[0] })}
           </h1>
-          <p className="max-w-[34rem] text-lg text-muted-foreground leading-relaxed sm:text-xl">
+          <p className="max-w-[40rem] text-lg text-muted-foreground leading-relaxed sm:text-xl">
             {headline}
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
