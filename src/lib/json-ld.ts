@@ -1,4 +1,4 @@
-import { content, getProfile } from "./content.ts";
+import { content, getProfile, getSkillGroups } from "./content.ts";
 import { type Locale, locales } from "./schemas/common.ts";
 
 /**
@@ -14,6 +14,8 @@ export function buildJsonLd(
   const pageUrl = `${siteUrl}/${locale}`;
   const personId = `${siteUrl}/#person`;
   const websiteId = `${siteUrl}/#website`;
+  const imageId = `${siteUrl}/#profile-image`;
+  const skillNames = getSkillGroups(locale).flatMap((g) => g.items);
 
   return {
     "@context": "https://schema.org",
@@ -25,7 +27,8 @@ export function buildJsonLd(
         jobTitle: profile.role,
         description: profile.headline,
         url: pageUrl,
-        image: `${siteUrl}/profile.jpg`,
+        image: { "@id": imageId },
+        knowsAbout: skillNames,
         email: `mailto:${profile.email}`,
         telephone: profile.whatsapp,
         address: {
@@ -55,7 +58,17 @@ export function buildJsonLd(
         name: `${profile.name} · ${profile.role}`,
         inLanguage: locale,
         isPartOf: { "@id": websiteId },
+        primaryImageOfPage: { "@id": imageId },
         mainEntity: { "@id": personId },
+      },
+      {
+        "@type": "ImageObject",
+        "@id": imageId,
+        url: `${siteUrl}/profile.jpg`,
+        contentUrl: `${siteUrl}/profile.jpg`,
+        width: 256,
+        height: 256,
+        caption: profile.name,
       },
       {
         "@type": "BreadcrumbList",

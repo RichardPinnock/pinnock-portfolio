@@ -76,7 +76,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <SkipLink label={t.skipToContent} />
       <main
         id="main"
-        className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-16 px-6 pt-14 pb-32 sm:pt-20"
+        className="mx-auto flex min-h-dvh w-full max-w-4xl flex-col gap-16 px-6 pt-14 pb-32 sm:pt-20"
       >
         <Hero
           name={profile.name}

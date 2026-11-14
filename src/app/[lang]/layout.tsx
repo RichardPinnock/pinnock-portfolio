@@ -41,6 +41,18 @@ export async function generateMetadata({
     description: profile.headline,
     authors: [{ name: profile.name }],
     creator: profile.name,
+    // Explicit so large image previews are allowed in results and Discover.
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     openGraph: {
       type: "website",
       siteName: profile.name,
